@@ -2,7 +2,7 @@
 1. Clonar el repositorio
 2. Acceder a la carpeta del repositorio
 3. Ejecutar el comando de instalacion para paquetes de npm
-    - > ```npm install```
+    - <code> npm install </code>
 
 # Comandos/scripts para ejecutar el proyecto
 ``` json
@@ -13,8 +13,8 @@
     }
 }
 ```
-- > ```npm start```
-- > ```npm run dev```
+- <code> npm start </code>
+- <code> npm run dev </code>
 
 # Rutas definidas.
 - GET 
