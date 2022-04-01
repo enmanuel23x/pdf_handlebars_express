@@ -1,0 +1,19 @@
+{
+  "name": "pdf_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "handlebars": "^4.7.7",
+    "handlebars-pdf": "^1.0.1",
+    "html-pdf-node": "^1.0.8"
+  }
+}
