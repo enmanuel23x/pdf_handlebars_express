@@ -1,7 +1,19 @@
-const express = require('express');
+require("dotenv").config();
+const express = require("express");
 const app = express();
 
-const pdfRouter = require('./src/routers/pdfRouter')
+const path = require("path");
 
-app.use('/pdf', pdfRouter)
-app.listen(2000, () => console.log('Listening to port 2000'))
+//  Routes
+const pdfRoutes = require("./src/routes/pdf-routes");
+app.use("/pdf", pdfRoutes);
+
+
+//  Serve static files for the files in the public folder
+app.use(express.static(path.join(__dirname, "/src/templates/assets")));
+
+
+
+app.listen(process.env.PORT, () =>{
+  console.log(`Express Server listening at port ${process.env.PORT}`)
+});

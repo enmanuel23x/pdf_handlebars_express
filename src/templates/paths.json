@@ -1,0 +1,4 @@
+{
+  "demo": "./src/templates/demo/demo.hbs",
+  "factsheet": "./src/templates/factsheet/factsheet.hbs"
+}
