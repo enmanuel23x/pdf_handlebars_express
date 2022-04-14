@@ -12,16 +12,31 @@ body {
 .page {
   width: 210mm;
   min-height: 297mm;
-  padding: 20mm;
-  /* margin: 10mm auto;
-  border: 1px #D3D3D3 solid;
-  border-radius: 5px; */
   margin: auto;
+  margin-bottom: 25px;
   background: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   color: black!important;
 }
-
+.page-body{
+  height: 250mm;
+  padding: 0 20mm;
+}
+.page-header{
+  height: 20mm;
+  width: inherit;
+}
+.page-footer{
+  height: 20mm;
+  width: inherit;
+}
+.page-footer-bottom{
+  vertical-align: bottom;
+  display: table-cell;
+}
+.page-footer-right{
+  text-align: right;
+}
 
 @page {
   size: A4;
