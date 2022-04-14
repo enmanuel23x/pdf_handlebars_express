@@ -6,7 +6,7 @@ const connectLiveReload = require("connect-livereload");
 const path = require("path");
 const createError = require("http-errors");
 const app = express();
-
+const { normalizePort } = require('./src/utils/utils')
 
 //logger
 if (process.env.LOGGER == "true") {
@@ -22,8 +22,10 @@ if (process.env.NODE_ENV === "development") {
       liveReloadServer.refresh("/");
     }, 100);
   });
+  const port = normalizePort(process.env.LIVE_PORT || '2001');
   app.use(connectLiveReload({
-    ignore: ['/pdf/generate']
+    ignore: ['/pdf/generate'],
+    port
   }));
 }
 
@@ -42,13 +44,13 @@ app.set("view engine", "hbs");
 
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function () {
   next(createError(404));
 });
 
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = process.env.NODE_ENV === "development" ? err : {};

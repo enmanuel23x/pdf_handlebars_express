@@ -1,32 +1,36 @@
-# Pasos para instalar
-1. Clonar el repositorio
-2. Acceder a la carpeta del repositorio
-3. Ejecutar el comando de instalacion para paquetes de npm
-    - <code> npm install </code>
-    - <code> npm install --verbose </code>
-
-# Comandos/scripts para ejecutar el proyecto
-``` json
-{
-    "scripts": {
-        "start": "node .",
-        "dev": "nodemon ."
-    }
-}
+# Steps to install
+1. Clone the repository
+2. Access the repository root folder
+3. Run the install command for npm packages
+``` 
+npm install
 ```
-- <code> npm start </code>
-- <code> npm run dev </code>
+```
+npm install --verbose 
+```
 
-# Rutas definidas.
+# Commands/scripts to run the project
+#### production mode
+``` 
+npm start
+```
+#### development server mode
+```
+npm run dev
+```
+
+# Routes.
 - GET 
-    - {{hots}}/pdf/test
+    - {{hots}}/pdf/generate/:name (pdf)
+    - {{hots}}/pdf/render/:name (html - development server)
 
-# Otros datos
-- Puerto por defecto 2000.
-- Host por defecto [http://localhost:2000](http://localhost:2000)
+# Other data
+- Default PORT 2000.
+- Default LIVE_PORT 2001 (For development server only).
+- Default Host [http://localhost:2000](http://localhost:2000)
 
 
-# Paqueteria
+# Packages
 ``` json
 {
     "dependencies": {
@@ -34,7 +38,14 @@
         "express": "^4.17.3",
         "handlebars": "^4.7.7",
         "handlebars-pdf": "^1.0.1",
-        "html-pdf-node": "^1.0.8"
+        "hbs": "^4.2.0",
+        "html-pdf-node": "^1.0.8",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "connect-livereload": "^0.6.1",
+        "livereload": "^0.9.3",
+        "nodemon": "^2.0.15"
     }
 }
 ```

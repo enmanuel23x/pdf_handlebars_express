@@ -5,9 +5,13 @@ const mockData = require("../examples/examples.json");
 const readFile = (fileName) =>
   new Promise((resolve) => {
     fs.readFile(fileName, "utf8", (err, data) => {
-      resolve(data);
+      if(err){
+        console.error(err)
+      }else{
+        resolve(data);
+      }
     });
-  });
+});
 
 const consultData = (objectParams) => {
   if (objectParams.mock) {
@@ -36,10 +40,21 @@ const convertToPDF = (htmlSource) =>
     html_to_pdf.generatePdf(file, options).then((pdfBuffer) => {
       resolve(pdfBuffer);
     });
-  });
+});
 
+const normalizePort = (val) => {
+  const port = parseInt(val, 10);
+  if (isNaN(port)) {
+    return val;
+  }
+  if (port >= 0) {
+    return port;
+  }
+  return false;
+}
 module.exports = {
   readFile,
   consultData,
   convertToPDF,
+  normalizePort
 };
