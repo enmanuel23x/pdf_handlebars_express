@@ -13,11 +13,10 @@ const consultData = (objectParams) => {
   if (objectParams.mock) {
     // simulate the delay of the data fetching and get the data from a json file
     return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(mockData[objectParams.template]);
-        }, 3000);
-    }
-    );
+      setTimeout(() => {
+        resolve(mockData[objectParams.template]);
+      }, 3000);
+    });
   }
   return {
     Name: "John Doe",
@@ -27,8 +26,13 @@ const consultData = (objectParams) => {
 
 const convertToPDF = (htmlSource) =>
   new Promise((resolve) => {
-    const options = { format: "A4", printBackground: true };
-    const file = { content: htmlSource };
+    const options = {
+      format: "A4",
+      printBackground: true
+    };
+    const file = {
+      content: htmlSource
+    };
     html_to_pdf.generatePdf(file, options).then((pdfBuffer) => {
       resolve(pdfBuffer);
     });

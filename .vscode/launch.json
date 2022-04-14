@@ -1,7 +1,6 @@
 {
     "version": "1.0.0",
-    "configurations": [
-        {
+    "configurations": [{
             "command": "npm start",
             "name": "Run npm start",
             "request": "launch",

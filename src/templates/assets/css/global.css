@@ -5,10 +5,12 @@ body {
   padding: 0;
   background-color: #2c2c2c;
 }
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
 .page {
   width: 210mm;
   min-height: 297mm;
@@ -16,25 +18,30 @@ body {
   margin-bottom: 25px;
   background: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  color: black!important;
+  color: black !important;
 }
-.page-body{
+
+.page-body {
   height: 250mm;
   padding: 0 20mm;
 }
-.page-header{
+
+.page-header {
   height: 20mm;
   width: inherit;
 }
-.page-footer{
+
+.page-footer {
   height: 20mm;
   width: inherit;
 }
-.page-footer-bottom{
+
+.page-footer-bottom {
   vertical-align: bottom;
   display: table-cell;
 }
-.page-footer-right{
+
+.page-footer-right {
   text-align: right;
 }
 
@@ -42,19 +49,23 @@ body {
   size: A4;
   margin: 0;
 }
+
 @media print {
-  html, body {
-      width: 210mm;
-      height: 297mm;        
+
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
   }
+
   .page {
-      margin: 0;
-      border: initial;
-      border-radius: initial;
-      width: initial;
-      min-height: initial;
-      box-shadow: initial;
-      background: initial;
-      page-break-after: always;
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
   }
 }

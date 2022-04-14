@@ -9,7 +9,7 @@ const app = express();
 
 
 //logger
-if(process.env.LOGGER == "true"){
+if (process.env.LOGGER == "true") {
   app.use(logger("dev"));
 }
 
