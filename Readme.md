@@ -3,9 +3,6 @@
 2. Access the repository root folder
 3. Run the install command for npm packages
 ``` 
-npm install
-```
-```
 npm install --verbose 
 ```
 
@@ -26,7 +23,7 @@ npm run dev
 
 # Other data
 - Default PORT 2000.
-- Default LIVE_PORT 2001 (For development server only).
+- Default LIVE_PORT 35729 (For development server only).
 - Default Host [http://localhost:2000](http://localhost:2000)
 
 

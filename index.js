@@ -6,7 +6,6 @@ const connectLiveReload = require("connect-livereload");
 const path = require("path");
 const createError = require("http-errors");
 const app = express();
-const { normalizePort } = require('./src/utils/utils')
 
 //logger
 if (process.env.LOGGER == "true") {
@@ -22,10 +21,8 @@ if (process.env.NODE_ENV === "development") {
       liveReloadServer.refresh("/");
     }, 100);
   });
-  const port = normalizePort(process.env.LIVE_PORT || '2001');
   app.use(connectLiveReload({
-    ignore: ['/pdf/generate'],
-    port
+    ignore: ['/pdf/generate']
   }));
 }
 
