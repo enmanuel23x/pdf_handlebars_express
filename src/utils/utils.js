@@ -27,7 +27,7 @@ const consultData = (objectParams) => {
 
 const convertToPDF = (htmlSource) =>
   new Promise((resolve) => {
-    const options = { format: "A4" };
+    const options = { format: "A4", printBackground: true };
     const file = { content: htmlSource };
     html_to_pdf.generatePdf(file, options).then((pdfBuffer) => {
       resolve(pdfBuffer);
