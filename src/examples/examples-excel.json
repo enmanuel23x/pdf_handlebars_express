@@ -1,0 +1,47 @@
+{
+    "demo": {
+        "fill": {
+            "type": "pattern",
+            "pattern": "solid",
+            "fgColor": {
+                "argb": "5E5E5E"
+            }
+        },
+        "font": {
+            "color": {
+                "argb": "FFFFFF"
+            }
+        },
+        "data": [
+            [
+                1,
+                "John Doe",
+                "01/01/2023"
+            ],
+            [
+                2,
+                "John Doe",
+                "01/01/2023"
+            ],
+            [
+                3,
+                "John Doe",
+                "01/01/2023"
+            ]
+        ],
+        "header": [
+            {
+                "header": "Id",
+                "key": "id"
+            },
+            {
+                "header": "Name",
+                "key": "name"
+            },
+            {
+                "header": "D.O.B.",
+                "key": "DOB"
+            }
+        ]
+    }
+}

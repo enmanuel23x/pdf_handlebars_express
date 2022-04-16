@@ -21,7 +21,7 @@ const createPDF = async (req, res) => {
   const {
     name
   } = req.params;
-  // if name is not in the templates folder, return 404
+  // if name is not in the templates folder, return 404 
   if (!templates[name]) {
     res.status(404).send({
       error: "Template Not Found"

@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "development") {
 
 //  Routes
 app.use("/pdf", require("./src/routes/pdf-routes"));
-
+app.use("/excel", require("./src/routes/excel-routes"));
 
 //  Serve static files for the files in the public folder
 app.use(express.static(path.join(__dirname, "/src/templates/assets")));
@@ -41,7 +41,7 @@ app.set("view engine", "hbs");
 
 
 // catch 404 and forward to error handler
-app.use(function () {
+app.use(function (_req, _res, next) {
   next(createError(404));
 });
 
